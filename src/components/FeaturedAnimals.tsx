@@ -29,7 +29,16 @@ const FeaturedAnimals = () => {
   ];
 
   return (
-    <section className="py-12 bg-secondary">
+    <section className="py-12 bg-secondary relative overflow-hidden">
+      {/* Декоративное изображение животного в углу */}
+      <div className="absolute top-5 right-5 w-[100px] opacity-20 rotate-12">
+        <img 
+          src="https://images.unsplash.com/photo-1503431128871-cd250803fa41?q=80&w=200&auto=format&fit=crop" 
+          alt="Силуэт обезьяны" 
+          className="object-contain"
+        />
+      </div>
+      
       <div className="container mx-auto px-6">
         <div className="flex justify-between items-center mb-8">
           <h2 className="text-3xl font-bold text-gray-800">Наши звезды</h2>

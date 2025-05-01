@@ -1,6 +1,11 @@
-#root {
-  margin: 0 auto;
-  text-align: center;
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-15px); }
+}
+
+.float-animation {
+  animation: float 4s ease-in-out infinite;
 }
 
 .logo {

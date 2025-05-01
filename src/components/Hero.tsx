@@ -34,6 +34,16 @@ const Hero = () => {
             </Button>
           </div>
         </div>
+        
+        {/* Добавленное изображение животного */}
+        <div className="absolute bottom-[-30px] right-10 md:right-20 w-[200px] md:w-[300px] hidden md:block">
+          <img 
+            src="https://images.unsplash.com/photo-1564349683136-77e08dba1ef3?q=80&w=500&auto=format&fit=crop" 
+            alt="Тигр" 
+            className="object-contain drop-shadow-2xl animate-[bounce_4s_ease-in-out_infinite]"
+            style={{ filter: "drop-shadow(0 0 15px rgba(0,0,0,0.5))" }}
+          />
+        </div>
       </div>
     </div>
   );
