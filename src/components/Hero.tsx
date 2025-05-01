@@ -9,8 +9,8 @@ const Hero = () => {
       <div 
         className="absolute inset-0 hidden md:block bg-center bg-cover transition-all duration-1000 ease-in-out" 
         style={{ 
-          backgroundImage: "url('https://images.unsplash.com/photo-1564760055775-d63b17a55c44?q=80&w=2000&auto=format&fit=crop')",
-          filter: "brightness(0.85)"
+          backgroundImage: "url('https://images.unsplash.com/photo-1534567153574-2b12153a87f0?q=80&w=2000&auto=format&fit=crop')",
+          filter: "brightness(0.8)"
         }} 
       />
       
@@ -18,12 +18,12 @@ const Hero = () => {
       <div 
         className="absolute inset-0 block md:hidden bg-center bg-cover" 
         style={{ 
-          backgroundImage: "url('https://images.unsplash.com/photo-1557050543-4d5f4e07ef46?q=80&w=1200&auto=format&fit=crop')",
+          backgroundImage: "url('https://images.unsplash.com/photo-1508817628294-5a453fa0b8fb?q=80&w=1200&auto=format&fit=crop')",
           filter: "brightness(0.8)"
         }} 
       />
       
-      <div className="absolute inset-0 bg-gradient-to-r from-black/50 via-black/30 to-transparent" />
+      <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/40 to-black/20" />
       
       <div className="relative container mx-auto h-full flex flex-col justify-center items-start px-6 z-10">
         <div className="bg-black/40 backdrop-blur-sm p-6 md:p-8 rounded-lg max-w-xl">
