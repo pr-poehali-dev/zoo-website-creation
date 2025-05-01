@@ -29,11 +29,11 @@ const FeaturedAnimals = () => {
   ];
 
   return (
-    <section className="py-12 bg-gray-50">
+    <section className="py-12 bg-secondary">
       <div className="container mx-auto px-6">
         <div className="flex justify-between items-center mb-8">
           <h2 className="text-3xl font-bold text-gray-800">Наши звезды</h2>
-          <Button variant="outline">
+          <Button variant="outline" className="bg-white">
             <Icon name="ChevronRight" size={16} />
             <span>Смотреть всех</span>
           </Button>

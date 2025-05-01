@@ -12,7 +12,7 @@ const Navbar = () => {
           <Link to="/" className="text-xl font-bold">ЗооМир</Link>
         </div>
         
-        <div className="hidden md:flex gap-6">
+        <div className="hidden md:flex gap-6 font-medium">
           <Link to="/" className="hover:underline">Главная</Link>
           <Link to="/animals" className="hover:underline">Животные</Link>
           <Link to="/schedule" className="hover:underline">Расписание</Link>
@@ -21,7 +21,7 @@ const Navbar = () => {
         </div>
         
         <div className="flex items-center gap-2">
-          <Button variant="secondary" size="sm">
+          <Button variant="secondary" size="sm" className="bg-white text-primary hover:bg-white/90">
             <Icon name="Clock" size={18} />
             <span>Режим работы</span>
           </Button>

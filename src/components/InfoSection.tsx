@@ -22,15 +22,15 @@ const InfoSection = () => {
   ];
 
   return (
-    <section className="py-12 bg-white">
+    <section className="py-12 bg-accent">
       <div className="container mx-auto px-6">
         <h2 className="text-3xl font-bold text-center mb-12">Информация для посетителей</h2>
         
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {infoItems.map((item, index) => (
-            <Card key={index} className="text-center">
+            <Card key={index} className="text-center border border-primary/20 shadow-md">
               <CardHeader>
-                <div className="mx-auto bg-primary/10 p-3 rounded-full mb-4">
+                <div className="mx-auto bg-primary/20 p-3 rounded-full mb-4">
                   <Icon name={item.icon} size={24} className="text-primary" />
                 </div>
                 <CardTitle>{item.title}</CardTitle>
