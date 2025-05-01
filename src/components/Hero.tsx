@@ -4,45 +4,53 @@ import Icon from "@/components/ui/icon";
 
 const Hero = () => {
   return (
-    <div className="relative h-[500px] overflow-hidden">
+    <div className="relative h-[500px] md:h-[600px] lg:h-screen max-h-[800px] overflow-hidden">
+      {/* Десктопное изображение - полноэкранное качественное фото животного */}
       <div 
-        className="absolute inset-0 bg-center bg-cover" 
+        className="absolute inset-0 hidden md:block bg-center bg-cover transition-all duration-1000 ease-in-out" 
         style={{ 
-          backgroundImage: "url('https://images.unsplash.com/photo-1572201419154-31772ff3057c?q=80&w=1920&auto=format&fit=crop')",
+          backgroundImage: "url('https://images.unsplash.com/photo-1564760055775-d63b17a55c44?q=80&w=2000&auto=format&fit=crop')",
+          filter: "brightness(0.85)"
+        }} 
+      />
+      
+      {/* Мобильное изображение - более компактное и с лучшим кадрированием для маленьких экранов */}
+      <div 
+        className="absolute inset-0 block md:hidden bg-center bg-cover" 
+        style={{ 
+          backgroundImage: "url('https://images.unsplash.com/photo-1557050543-4d5f4e07ef46?q=80&w=1200&auto=format&fit=crop')",
           filter: "brightness(0.8)"
         }} 
       />
       
-      <div className="absolute inset-0 bg-black bg-opacity-30" /> {/* Дополнительный слой затемнения */}
+      <div className="absolute inset-0 bg-gradient-to-r from-black/50 via-black/30 to-transparent" />
       
-      <div className="relative container mx-auto h-full flex flex-col justify-center items-start px-6">
-        <div className="bg-black bg-opacity-30 p-6 rounded-lg backdrop-blur-sm max-w-2xl">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-4">
+      <div className="relative container mx-auto h-full flex flex-col justify-center items-start px-6 z-10">
+        <div className="bg-black/40 backdrop-blur-sm p-6 md:p-8 rounded-lg max-w-xl">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4">
             Добро пожаловать в <span className="text-green-300">ЗооМир</span>
           </h1>
-          <p className="text-xl text-white mb-8">
+          <p className="text-lg md:text-xl text-white/90 mb-8">
             Откройте для себя удивительный мир животных. Познакомьтесь с редкими видами и проведите незабываемый день вместе с семьей.
           </p>
           <div className="flex flex-wrap gap-4">
-            <Button size="lg" className="bg-primary hover:bg-primary/90 text-white">
+            <Button size="lg" className="bg-primary hover:bg-primary/90 text-white transition-all">
               <Icon name="Ticket" size={20} />
               <span>Купить билеты</span>
             </Button>
-            <Button variant="outline" size="lg" className="bg-white/10 backdrop-blur-sm text-white border-white hover:bg-white/20">
+            <Button variant="outline" size="lg" className="bg-white/10 backdrop-blur-sm text-white border-white hover:bg-white/20 transition-all">
               <Icon name="Calendar" size={20} />
               <span>Расписание шоу</span>
             </Button>
           </div>
         </div>
         
-        {/* Картинка медведя слева снизу */}
-        <div className="absolute bottom-[-20px] left-[50%] transform translate-x-[-50%] md:left-auto md:right-20 md:translate-x-0 w-[180px] md:w-[220px] z-10">
-          <img 
-            src="https://images.unsplash.com/photo-1589656966895-2f33e7653819?q=80&w=400&auto=format&fit=crop" 
-            alt="Медведь" 
-            className="object-contain"
-            style={{ filter: "drop-shadow(0 0 10px rgba(0,0,0,0.7))" }}
-          />
+        {/* Индикатор прокрутки с анимацией */}
+        <div className="hidden lg:flex absolute bottom-8 left-1/2 transform -translate-x-1/2 flex-col items-center">
+          <span className="text-white/80 text-sm mb-2">Узнать больше</span>
+          <div className="w-6 h-10 border-2 border-white/50 rounded-full flex justify-center p-1">
+            <div className="w-1.5 h-2.5 bg-white/80 rounded-full animate-[bounce_2s_infinite]"></div>
+          </div>
         </div>
       </div>
     </div>
