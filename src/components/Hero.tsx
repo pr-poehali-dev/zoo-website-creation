@@ -35,13 +35,13 @@ const Hero = () => {
           </div>
         </div>
         
-        {/* Добавленное изображение животного */}
-        <div className="absolute bottom-[-30px] right-10 md:right-20 w-[200px] md:w-[300px] hidden md:block">
+        {/* Картинка медведя слева снизу */}
+        <div className="absolute bottom-[-20px] left-[50%] transform translate-x-[-50%] md:left-auto md:right-20 md:translate-x-0 w-[180px] md:w-[220px] z-10">
           <img 
-            src="https://images.unsplash.com/photo-1564349683136-77e08dba1ef3?q=80&w=500&auto=format&fit=crop" 
-            alt="Тигр" 
-            className="object-contain drop-shadow-2xl animate-[bounce_4s_ease-in-out_infinite]"
-            style={{ filter: "drop-shadow(0 0 15px rgba(0,0,0,0.5))" }}
+            src="https://images.unsplash.com/photo-1589656966895-2f33e7653819?q=80&w=400&auto=format&fit=crop" 
+            alt="Медведь" 
+            className="object-contain"
+            style={{ filter: "drop-shadow(0 0 10px rgba(0,0,0,0.7))" }}
           />
         </div>
       </div>
